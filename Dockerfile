@@ -48,5 +48,5 @@ expose	2004
 # Carbon cache query port
 expose 7002
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/supervisord -c /etc/supervisord.conf"]
 
