@@ -32,9 +32,9 @@ RUN sed -i "s/#UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/ss
  echo 'alias vi="vim"' >> /home/appuser/.bash_profile;
 
 
-
 # includes supervisor config
 ADD content/ /
+RUN chmod +x /usr/local/bin/graphite_start
 
 
 # Nginx
