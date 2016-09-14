@@ -1,3 +1,13 @@
-echo_log "Starting Supervisor. CTRL-C will stop the container."
+#!/bin/bash
+set -e
+
+function echo_log {
+        DATE='date +%Y/%m/%d:%H:%M:%S'
+        echo `$DATE`" $1"
+}
+
+initfile=/etc/dockerinit.done
+
+
 /usr/bin/supervisord -c /etc/supervisord.conf
 
